@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { config } from '@/lib/concepts';
 
 export default function Footer() {
@@ -25,7 +26,7 @@ export default function Footer() {
 
         {/* Right Column */}
         <div className="font-sans text-xs opacity-50 md:text-right max-w-[320px] md:max-w-none md:ml-auto">
-          <p>This page is shared privately for review. Please don't share the link without checking in first, and do not use these images or concepts for outside development.</p>
+          <p>This page is shared privately for review. Please don&apos;t share the link without checking in first, and do not use these images or concepts for outside development.</p>
         </div>
 
       </div>

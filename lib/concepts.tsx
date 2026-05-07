@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 
 export const config = {
@@ -59,7 +60,7 @@ export const concepts: Concept[] = [
     eyebrow: "CONCEPT 02",
     name: "Field Notes",
     tagline: "Earthy craft. Documentary storytelling. Farm to McKinney.",
-    rationale: <>Field Notes treats <img src="/images/ll.webp" alt="Coffee Nutz" className="h-[1em] w-auto inline-block align-middle -mt-[0.2em]" /> like a longform magazine feature. The palette is raw oat, forest green, terracotta, and sage — natural, sun-warmed, never sterile. Typography pairs a humanist serif with monospace data — temperatures, altitudes, brew ratios — so the craft shows its work. The hero is a horizontal scroll following a single coffee bean. This direction makes <img src="/images/ll.webp" alt="Coffee Nutz" className="h-[1em] w-auto inline-block align-middle -mt-[0.2em]" /> educational without being lecture-y. It's the strongest fit if you want customers to understand exactly why your coffee is different and to feel like they're learning something every time they visit. Best fit if you want the brand to feel grounded, intentional, and quietly expert.</>,
+    rationale: <>Field Notes treats <img src="/images/ll.webp" alt="Coffee Nutz" className="h-[1em] w-auto inline-block align-middle -mt-[0.2em]" /> like a longform magazine feature. The palette is raw oat, forest green, terracotta, and sage — natural, sun-warmed, never sterile. Typography pairs a humanist serif with monospace data — temperatures, altitudes, brew ratios — so the craft shows its work. The hero is a horizontal scroll following a single coffee bean. This direction makes <img src="/images/ll.webp" alt="Coffee Nutz" className="h-[1em] w-auto inline-block align-middle -mt-[0.2em]" /> educational without being lecture-y. It&apos;s the strongest fit if you want customers to understand exactly why your coffee is different and to feel like they&apos;re learning something every time they visit. Best fit if you want the brand to feel grounded, intentional, and quietly expert.</>,
     pullQuote: "",
     colors: {
       bg: "bg-field-oat",

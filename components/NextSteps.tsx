@@ -1,5 +1,4 @@
-import { config } from '@/lib/concepts';
-
+/* eslint-disable @next/next/no-img-element */
 export default function NextSteps() {
   return (
     <section id="final-thoughts" className="w-full bg-[#FBF7F2] px-6 pt-12 pb-24 md:pt-16 md:pb-32 flex justify-center">
@@ -10,7 +9,7 @@ export default function NextSteps() {
         
         <div className="font-sans text-[18px] leading-[1.8] text-[#1B1B1B]/80 space-y-6 mb-12">
           <p>
-            When you're ready, reply to my message and we'll set up a quick call to talk through what's resonating and where to go from here. If you have a partner, family, or trusted regular whose opinion matters, send them this link too. The password's the same.
+            When you&apos;re ready, reply to my message and we&apos;ll set up a quick call to talk through what&apos;s resonating and where to go from here. If you have a partner, family, or trusted regular whose opinion matters, send them this link too. The password&apos;s the same.
           </p>
         </div>
 
