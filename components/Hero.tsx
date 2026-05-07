@@ -2,7 +2,7 @@
 
 export default function Hero() {
   return (
-    <section className="relative w-full bg-[#FBF7F2] flex flex-col items-center justify-center min-h-[60vh] md:min-h-[80vh] px-6 py-24 text-center">
+    <section className="relative w-full bg-[#FBF7F2] flex flex-col items-center justify-center min-h-[100svh] px-6 py-24 text-center">
       <div className="max-w-4xl mx-auto flex flex-col items-center">
         <p className="font-sans text-xs md:text-sm tracking-[0.2em] uppercase text-black/40 mb-6">
           A PRIVATE PREVIEW · Preppared by Cairn Agency
