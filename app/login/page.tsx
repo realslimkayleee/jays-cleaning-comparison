@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 
 export default function LoginPage() {
   const [password, setPassword] = useState('');
@@ -30,7 +29,7 @@ export default function LoginPage() {
       } else {
         setError('Incorrect password');
       }
-    } catch (err) {
+    } catch {
       setError('Something went wrong. Please try again.');
     } finally {
       setIsLoading(false);
@@ -41,6 +40,7 @@ export default function LoginPage() {
     <div className="min-h-screen bg-[#FBF7F2] text-[#1B1B1B] flex flex-col items-center justify-center p-6">
       <div className="w-full max-w-sm">
         <div className="flex justify-center mb-8">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img 
             src="/images/ll.webp" 
             alt="Coffee Nutz" 
