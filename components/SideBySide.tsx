@@ -63,8 +63,8 @@ export default function SideBySide() {
       <div className="w-full max-w-[1200px]">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 md:gap-8">
           <SideBySideImage 
-            src="/images/concept-a/home_velvet_hour.png"
-            filename="home_velvet_hour.png"
+            src="/images/concept-a/Home.png"
+            filename="Home.png"
             caption="Velvet Hour — restrained, theatrical, grown-up."
             placeholderBg="bg-velvet-oxblood"
             placeholderText="text-velvet-brass"

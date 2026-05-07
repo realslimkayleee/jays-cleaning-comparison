@@ -48,11 +48,11 @@ export const concepts: Concept[] = [
       placeholderText: "text-velvet-brass"
     },
     images: [
-      { filename: "home_velvet_hour.png", src: "/images/concept-a/home_velvet_hour.png", caption: "Home", alt: "Velvet Hour concept — Home" },
-      { filename: "menu_velvet_hour.png", src: "/images/concept-a/menu_velvet_hour.png", caption: "Menu", alt: "Velvet Hour concept — Menu" },
-      { filename: "beyond_coffee_velvet_hour.png", src: "/images/concept-a/beyond_coffee_velvet_hour.png", caption: "Beyond Coffee", alt: "Velvet Hour concept — Beyond Coffee" },
-      { filename: "faq_velvet_hour.png", src: "/images/concept-a/faq_velvet_hour.png", caption: "FAQ", alt: "Velvet Hour concept — FAQ" },
-      { filename: "jobs_velvet_hour.png", src: "/images/concept-a/jobs_velvet_hour.png", caption: "Jobs", alt: "Velvet Hour concept — Jobs" },
+      { filename: "Home.png", src: "/images/concept-a/Home.png", caption: "Home", alt: "Velvet Hour concept — Home" },
+      { filename: "menu.png", src: "/images/concept-a/menu.png", caption: "Menu", alt: "Velvet Hour concept — Menu" },
+      { filename: "beyond_coffee.png", src: "/images/concept-a/beyond_coffee.png", caption: "Beyond Coffee", alt: "Velvet Hour concept — Beyond Coffee" },
+      { filename: "FAQ.png", src: "/images/concept-a/FAQ.png", caption: "FAQ", alt: "Velvet Hour concept — FAQ" },
+      { filename: "jobs.png", src: "/images/concept-a/jobs.png", caption: "Jobs", alt: "Velvet Hour concept — Jobs" },
     ]
   },
   {
