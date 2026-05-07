@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="relative w-full bg-[#FBF7F2] flex flex-col items-center justify-center min-h-[100svh] px-6 py-24 text-center">
       <div className="max-w-4xl mx-auto flex flex-col items-center">
         <p className="font-sans text-xs md:text-sm tracking-[0.2em] uppercase text-black/40 mb-6">
-          A PRIVATE PREVIEW · Preppared by Cairn Agency
+          A PRIVATE PREVIEW · Prepared by <a href="https://cairnagency.io" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity underline underline-offset-4">Cairn Agency</a>
         </p>
         
         <h1 className="font-serif text-[48px] md:text-[80px] leading-[1.1] tracking-tight text-[#1B1B1B] mb-8">
