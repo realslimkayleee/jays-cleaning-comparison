@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#110e04",
+                        "primary-container": "#0e0e0e",
+                        "surface-dim": "#161308",
+                        "on-secondary-fixed": "#3e0408",
+                        "on-tertiary": "#3f2e00",
+                        "on-secondary": "#5b191a",
+                        "primary-fixed-dim": "#c9c6c5",
+                        "on-surface-variant": "#c4c7c7",
+                        "on-primary-fixed-variant": "#474646",
+                        "tertiary": "#e4c278",
+                        "tertiary-fixed-dim": "#e4c278",
+                        "outline": "#8e9192",
+                        "primary-fixed": "#e5e2e1",
+                        "primary": "#c9c6c5",
+                        "on-error": "#690005",
+                        "secondary-fixed-dim": "#ffb3af",
+                        "surface-bright": "#3d392b",
+                        "inverse-surface": "#eae2ce",
+                        "secondary-container": "#782f2f",
+                        "on-background": "#eae2ce",
+                        "surface": "#161308",
+                        "surface-tint": "#c9c6c5",
+                        "surface-container-high": "#2d2a1d",
+                        "inverse-primary": "#5f5e5e",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#ffdad8",
+                        "surface-variant": "#383527",
+                        "surface-container": "#232013",
+                        "secondary": "#ffb3af",
+                        "on-primary": "#313030",
+                        "on-surface": "#eae2ce",
+                        "inverse-on-surface": "#343023",
+                        "tertiary-fixed": "#ffdf9b",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-secondary-container": "#fe9a96",
+                        "surface-container-highest": "#383527",
+                        "on-tertiary-fixed": "#251a00",
+                        "on-tertiary-fixed-variant": "#5a4302",
+                        "background": "#161308",
+                        "on-secondary-fixed-variant": "#782f2f",
+                        "tertiary-container": "#150d00",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#7c7b7a",
+                        "outline-variant": "#444748",
+                        "surface-container-low": "#1f1c0f",
+                        "on-tertiary-container": "#947835",
+                        "error": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "section-gap": "128px",
+                        "margin-edge": "64px",
+                        "gutter": "24px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Newsreader"],
+                        "body-rt": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "headline-md": ["Newsreader"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["80px", {"lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "400"}],
+                        "body-rt": ["16px", {"lineHeight": "1.8", "letterSpacing": "0.01em", "fontWeight": "300"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.2em", "fontWeight": "500"}],
+                        "headline-md": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .film-grain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        .velvet-gradient {
+            background: radial-gradient(circle at center, rgba(92, 26, 27, 0.15) 0%, rgba(14, 14, 14, 0) 70%);
+        }
+        .text-glow {
+            text-shadow: 0 0 12px rgba(228, 194, 120, 0.2);
+        }
+        .circular-orbit {
+            position: relative;
+            width: 600px;
+            height: 600px;
+        }
+        .orbit-item {
+            position: absolute;
+            transform-origin: center;
+        }
+    </style>
+</head>
+<body class="bg-primary-container text-on-surface font-body-rt selection:bg-tertiary selection:text-on-tertiary">
+<div class="film-grain"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md flex justify-between items-center px-margin-edge py-8 w-full">
+<div class="font-display-lg text-headline-md text-on-surface tracking-tighter">COFFEE NUTZ</div>
+<div class="hidden md:flex gap-12">
+<a class="text-tertiary border-b border-tertiary pb-1 font-label-caps text-label-caps tracking-[0.2em] hover:text-primary transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]" href="#">HOME</a>
+<a class="text-tertiary/60 font-label-caps text-label-caps tracking-[0.2em] hover:text-primary transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]" href="#">MENU</a>
+<a class="text-tertiary/60 font-label-caps text-label-caps tracking-[0.2em] hover:text-primary transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]" href="#">BEYOND COFFEE</a>
+<a class="text-tertiary/60 font-label-caps text-label-caps tracking-[0.2em] hover:text-primary transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]" href="#">FAQ</a>
+<a class="text-tertiary/60 font-label-caps text-label-caps tracking-[0.2em] hover:text-primary transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]" href="#">JOBS</a>
+</div>
+<button class="md:hidden text-tertiary material-symbols-outlined">menu</button>
+</nav>
+<main class="relative">
+<!-- HERO SEQUENCE: Overture -->
+<section class="min-h-screen flex flex-col items-center justify-center text-center px-margin-edge relative overflow-hidden">
+<div class="absolute inset-0 velvet-gradient"></div>
+<div class="relative z-10 max-w-4xl">
+<span class="font-label-caps text-label-caps text-tertiary tracking-[0.4em] mb-8 block">THE VELVET HOUR</span>
+<h1 class="font-display-lg text-display-lg text-primary-fixed mb-6 leading-[0.9]">Brewed Bold.<br/>Crafted Fresh.</h1>
+<p class="font-body-rt text-on-surface-variant italic opacity-80">one shot. twenty-five seconds. pulled with intent.</p>
+</div>
+<div class="absolute bottom-12 flex flex-col items-center animate-bounce opacity-40">
+<span class="material-symbols-outlined text-tertiary">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- HERO SEQUENCE: The Shot & The Pour -->
+<section class="min-h-screen flex items-center justify-center px-margin-edge py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center max-w-container-max mx-auto">
+<div class="relative aspect-[4/5] bg-surface-container-low overflow-hidden">
+<img alt="Slow motion espresso" class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-[2000ms] ease-[cubic-bezier(0.65,0,0.35,1)]" data-alt="A cinematic, extreme close-up shot of rich, dark espresso pouring in slow motion into a minimalist ceramic cup. The lighting is low-key and dramatic, highlighting the oily sheen and thick crema of the coffee. The background is a deep matte black, emphasizing the warmth of the liquid. The overall mood is luxurious, ritualistic, and highly focused, with a fine film grain texture visible." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF3SDtkonZfkLWeNzV9TTpoegPuN5oaySRColZTWV1AGnM1oHkig46k7hB87KG7XGKGIzzRsKuvZ2MbfxVtNoo6iX4JPPR6gNDH-AdBgccwGAdXdDwh1G8BhIYZJMK7Q6opZf-jwCM1gJp_sCZLG7Y1flA5gDxJRY06i7WOKF8YB_k_UpFc-a6iRJGG-6CS1Rt_6yBctl52mEMoy9lGDdy9uwgyXmgn9b8AzABVoufSIzKdCcNLfVrzN_IQo6oVbZYOH3ORqznLTaG"/>
+<div class="absolute inset-0 shadow-[inset_0_0_100px_rgba(0,0,0,0.8)] pointer-events-none"></div>
+</div>
+<div class="space-y-8">
+<h2 class="font-display-lg text-headline-md text-tertiary">The Ritual of the Pull</h2>
+<p class="font-body-rt text-on-surface-variant text-lg max-w-md">Every cup begins with the heavy resistance of the lever. We honor the chemistry of the bean, extracting character through precise pressure and unwavering patience. This is coffee without compromise.</p>
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="h-[1px] w-12 bg-tertiary group-hover:w-24 transition-all duration-700"></div>
+<span class="font-label-caps text-label-caps text-tertiary">EXPLORE THE CRAFT</span>
+</div>
+</div>
+</div>
+</section>
+<!-- HERO SEQUENCE: The Reveal (Circular Menu) -->
+<section class="min-h-screen bg-surface-container-lowest flex flex-col items-center justify-center py-section-gap px-margin-edge overflow-hidden">
+<div class="text-center mb-24 relative z-10">
+<h2 class="font-display-lg text-display-lg mb-4 text-glow">The Signature Orbit</h2>
+<p class="font-label-caps text-label-caps text-on-secondary-container">SELECT YOUR INFUSION</p>
+</div>
+<div class="relative circular-orbit flex items-center justify-center">
+<!-- Center Core -->
+<div class="w-48 h-48 rounded-full border border-tertiary/20 flex items-center justify-center bg-primary-container z-20">
+<div class="text-center">
+<span class="font-display-lg text-headline-md text-tertiary">NUTZ</span>
+<div class="h-[1px] w-8 bg-tertiary mx-auto my-2"></div>
+<span class="font-label-caps text-[10px] tracking-widest text-tertiary/60">EST 2024</span>
+</div>
+</div>
+<!-- Orbiting Drinks -->
+<div class="orbit-item" style="top: 0; left: 50%; transform: translate(-50%, -50%);">
+<div class="group cursor-pointer flex flex-col items-center">
+<div class="w-32 h-32 rounded-full overflow-hidden border border-tertiary/10 group-hover:border-tertiary transition-all duration-500 mb-4">
+<img alt="Honey Bee Latte" class="w-full h-full object-cover" data-alt="A top-down circular shot of a Honey Bee Latte, showcasing a delicate honeycomb pattern etched into the creamy foam. The drink is served in a dark ceramic cup, with subtle golden honey drizzles catching the low-key warm lighting. The aesthetic is apothecary-chic, minimalist, and high-contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsbCiT7i0_I-nniu85xOCXYpwArJi4GGxiymk-YcPiAFEL4WenViOcpv8eaa9t-rTeQ8Zzj7d2dyyf_fk3NyQ5GmCy77krXS1Upidm57c0FTb4MNqOLl9PQqjAaqUC_JLJ7jxEZjBcRL5vTZFDnNTDZC54OquiGjocmkLUD8zc4mEU5JxqylpVQRfUixcqJVDz46eohdeiRm0zliMxiwSD0a0sMWUiE9dKE0BtZXWCmg6ss4Lk0zLZULqarxRMMOTj9ltoDw5fsWb4"/>
+</div>
+<span class="font-label-caps text-[10px] text-tertiary opacity-0 group-hover:opacity-100 transition-opacity">HONEY BEE LATTE</span>
+</div>
+</div>
+<div class="orbit-item" style="top: 25%; right: 0; transform: translate(50%, -50%);">
+<div class="group cursor-pointer flex flex-col items-center">
+<div class="w-32 h-32 rounded-full overflow-hidden border border-tertiary/10 group-hover:border-tertiary transition-all duration-500 mb-4">
+<img alt="Iced Ube Matcha" class="w-full h-full object-cover" data-alt="A circular side profile of an Iced Ube Matcha, showing distinct layers of deep purple ube and vibrant green matcha swirling into each other. The condensation on the clear glass is captured with high detail, set against a dark, moody background with subtle film grain." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEzIxexymDnSW2E2M74WUfKDMUYlIKHpZFUysKU4Yo1WocZ3WE7nvM_RiOmvC9DBT5zKeF_C6brkl9ZKcLezPOCP4CSb67tWApkESu45B75h8ArMfhbRgLnbvK0w7Nd5R0n4LtWi5MP0DkBShSWiDHvawJWCnXvdbSdGNvTgJ7LFsRfwsLAmQufS_KhvfcWgP8lfBEYZGCle8H1GErJN-wa1EupMUzU7ILpuvDB6y4Ag3Vt57QlUM1xvbShdNXo0-zftzTuCOT7BlC"/>
+</div>
+<span class="font-label-caps text-[10px] text-tertiary opacity-0 group-hover:opacity-100 transition-opacity">ICED UBE MATCHA</span>
+</div>
+</div>
+<div class="orbit-item" style="bottom: 25%; right: 0; transform: translate(50%, 50%);">
+<div class="group cursor-pointer flex flex-col items-center">
+<div class="w-32 h-32 rounded-full overflow-hidden border border-tertiary/10 group-hover:border-tertiary transition-all duration-500 mb-4">
+<img alt="Kyoto Dusk Hojicha" class="w-full h-full object-cover" data-alt="A minimalist circular presentation of a Kyoto Dusk Hojicha. The toasted brown tea is topped with a silky, almost-black foam, served in a rough-hewn stone vessel. The atmosphere is serene and zen-like, with shadows playing across the texture of the foam." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2h7_8zOftLU54zY5tfLdV7Fbhjini1naCPwdLx07ZOwu_jV5xp8tIQ9xhDY70lZV0jisKJev39xo0GP-M0JCMyf5Bw6_oDri9wCfRtwI-9OftvVfXNAtwVbzfV5Sp3Bpi9VK6p7BV51Dr2GgpGVwOMp3Uv-UsaEUb2uKvyU8C_dFeVC2snaTuplMxpxszQhUprrgfodYyczuLd_AYQBygpTnX4SVUJ2WlRAT5l1UGl2QxnbYl0F84q1YCINxxL_IWtA_3WC-wjOoK"/>
+</div>
+<span class="font-label-caps text-[10px] text-tertiary opacity-0 group-hover:opacity-100 transition-opacity">KYOTO DUSK HOJICHA</span>
+</div>
+</div>
+<div class="orbit-item" style="bottom: 0; left: 50%; transform: translate(-50%, 50%);">
+<div class="group cursor-pointer flex flex-col items-center">
+<div class="w-32 h-32 rounded-full overflow-hidden border border-tertiary/10 group-hover:border-tertiary transition-all duration-500 mb-4">
+<img alt="Forest Latte" class="w-full h-full object-cover" data-alt="A circular view of a Forest Latte, featuring an intricate pine tree latte art design in creamy white against a deep, pine-green base. The lighting is focused and warm, like a spotlight in a dark theater, highlighting the organic textures of the milk foam." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcsV7z5PTPHE2dSiPYW07z4Ue8G_8rymw9AEMGquSuWRxssdcNtybiE-e2qv4-htr_PDrWThzZdj22FT-7GizGc8oOKIsS_l3Xllf-xniW-0ZybQ1s2EhlQL5uHEbYEDuGpIHPgUbgDRRyfouxRWqBkHuGb7YXy-PcVjJy_fwtkMQ8kCfA3P8e0DzFm-ORxI76lDPxrB121r-XjlDppmPEvR1jDRLdqvTCH023N5_E8APN2y9tz02Kh8m1pyVAhTUhOKxREyYevZL_"/>
+</div>
+<span class="font-label-caps text-[10px] text-tertiary opacity-0 group-hover:opacity-100 transition-opacity">FOREST LATTE</span>
+</div>
+</div>
+<div class="orbit-item" style="bottom: 25%; left: 0; transform: translate(-50%, 50%);">
+<div class="group cursor-pointer flex flex-col items-center">
+<div class="w-32 h-32 rounded-full overflow-hidden border border-tertiary/10 group-hover:border-tertiary transition-all duration-500 mb-4">
+<img alt="Charcoal Latte" class="w-full h-full object-cover" data-alt="An artistic circular shot of a Charcoal Latte, featuring stark black and white marbleized swirls in the foam. The aesthetic is goth-luxury, served in a matte black cup that blends into the dark background, creating a floating illusion under a soft spotlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuVwWF7fm_PvVOMJnYEQRaXl4lDFfZrnJFkMb4r9skZqghNgi_y5Kw2GVk9Wh04OjHlIys45X1jPCo4TS7TQePBi8odIMhT1h9-mES4GNiWsiDJbzpybO4sEXxFlzOZ0claKtoU-Lcy_2z7u6WLX_hf2TUGR6B5YxPgR51PSLZRp9AVZHqUMrUloSURSbeh52-KAenhUPAQWwRgkseFePM6oA2VXIayTZ9Yw8lafpZnKUWpUxhwhL0n0RPsen3Y3zvuAS2889TfZ3v"/>
+</div>
+<span class="font-label-caps text-[10px] text-tertiary opacity-0 group-hover:opacity-100 transition-opacity">CHARCOAL LATTE</span>
+</div>
+</div>
+<div class="orbit-item" style="top: 25%; left: 0; transform: translate(-50%, -50%);">
+<div class="group cursor-pointer flex flex-col items-center">
+<div class="w-32 h-32 rounded-full overflow-hidden border border-tertiary/10 group-hover:border-tertiary transition-all duration-500 mb-4">
+<img alt="Iced Strawberry Matcha" class="w-full h-full object-cover" data-alt="A circular glass view of an Iced Strawberry Matcha, showing three distinct layers: a bright red strawberry purée bottom, a creamy white milk middle, and a vivid green matcha top. The image is crisp and refreshing, set against a dark, cinematic backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU2FTpoKNpfv2KoEjtymFNXu-U-ImAA5hrQvOxkmtoxmDvMwoiKVWtyxKCMJGZ7ur1-6Nb9Iqk5RzDmlNe_JWUyi5BxIrXpF0QKR87oxoXD9h27KGEUqUPWgWmzZelMgiCUECVFTiShk8OeU8wwoyEwxwqNreUt_lRlfZxRkSnfDIHlgK9SqTx7wZUBYkj-dnLBE7yGjzUVDOyrUpocRVK97HscN5EhCmBuPn3mzwUccuFFUNc7spQ1CgLHrQevMuBLAC5vzidSvb3"/>
+</div>
+<span class="font-label-caps text-[10px] text-tertiary opacity-0 group-hover:opacity-100 transition-opacity">ICED STRAWBERRY MATCHA</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: The Locale & Story -->
+<section class="py-section-gap px-margin-edge bg-primary-container">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
+<!-- Brand Manifesto -->
+<div class="lg:col-span-7 space-y-12">
+<span class="font-label-caps text-label-caps text-tertiary">OUR PHILOSOPHY</span>
+<h2 class="font-display-lg text-display-lg text-primary-fixed italic leading-tight">We do not serve coffee; we curate the transition from day to night.</h2>
+<div class="space-y-6 text-on-surface-variant text-lg font-body-rt leading-relaxed border-l border-tertiary/20 pl-8">
+<p>Coffee Nutz was born in the quiet corners of McKinney, a sanctuary for those who seek the sublime in the mundane. Our "Velvet Hour" concept is an homage to the slow, deliberate pace of a forgotten era—where the steam of the machine is the only choir and the scent of roasted bean is the only scripture.</p>
+<p>Every pour is a performance. Every bean is a protagonist. We invite you to step out of the noise and into the hushed reverence of our craft.</p>
+</div>
+</div>
+<!-- Location & Ribbons -->
+<div class="lg:col-span-5 space-y-12 bg-surface-container-low p-12 border border-tertiary/5 relative">
+<div class="space-y-4">
+<span class="font-label-caps text-label-caps text-tertiary">THE SANCTUARY</span>
+<h3 class="font-display-lg text-headline-md text-on-surface">McKinney, Texas</h3>
+<div class="font-body-rt text-on-surface-variant space-y-1">
+<p>6951 S Custer Rd #500</p>
+<p>McKinney, TX 75070</p>
+<p class="pt-4 text-tertiary">(469) 678-5050</p>
+</div>
+<div class="mt-8">
+<img alt="McKinney Location Map" class="w-full h-48 object-cover grayscale brightness-50 contrast-125 border border-tertiary/10" data-alt="A stylized, low-contrast dark map showing the McKinney area near S Custer Rd. The map is rendered in deep charcoal and brass tones, matching the brand aesthetic. It is minimalist with few labels, focusing on the sophisticated geometric layout of the streets." data-location="McKinney, Texas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUDYWYbYR8-CH8tmeCdQL8A5h57xJILfVGwQnCuqGXWvSHMHLOvLi8wC3Zykx43VuExEPW5aY_oFuhx8T6fpIx7jgwRmbqIzIB0Xyad49VMwZzgTlFgUaaQgZ5tjWuCr2HolOTK3Af8gizviSbAhkaKKTA_zQciISBNXEx38rqUoI9K2VWrdbs6xChXbg2Het4t-oznlG1sz2mk98dcgj5VBjBbrJBbDbvqY10obQLtENHWyCd1UXYWH9ODrKZIT_AN97WNHylj8pm"/>
+</div>
+</div>
+<!-- Brass Ribbons -->
+<div class="space-y-4">
+<div class="bg-tertiary text-on-tertiary py-3 px-6 flex justify-between items-center transform -rotate-1 translate-x-2">
+<span class="font-label-caps text-[10px] font-bold">COMMUNITY HONOR</span>
+<span class="font-body-rt font-bold text-sm italic">10% OFF FIRST RESPONDERS &amp; TEACHERS</span>
+</div>
+<div class="bg-secondary-container text-on-secondary-container py-3 px-6 flex justify-between items-center transform rotate-1 -translate-x-2">
+<span class="font-label-caps text-[10px] font-bold">CRAZY TUESDAY</span>
+<span class="font-body-rt font-bold text-sm italic">CODE: CRAZYTUE</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full relative bottom-0 border-t border-tertiary/10 mt-section-gap flex flex-col items-center gap-12 py-section-gap px-margin-edge text-center bg-surface-container-lowest">
+<div class="font-display-lg text-headline-md text-tertiary">COFFEE NUTZ</div>
+<div class="flex flex-wrap justify-center gap-12">
+<a class="font-body-rt text-body-rt text-on-surface-variant hover:text-tertiary transition-all duration-300" href="#">CONTACT</a>
+<a class="font-body-rt text-body-rt text-on-surface-variant hover:text-tertiary transition-all duration-300" href="#">HOURS</a>
+<a class="font-body-rt text-body-rt text-on-surface-variant hover:text-tertiary transition-all duration-300" href="#">NEWSLETTER</a>
+<a class="font-body-rt text-body-rt text-on-surface-variant hover:text-tertiary transition-all duration-300 text-tertiary" href="#">JOIN THE CLUB</a>
+</div>
+<p class="font-body-rt text-on-surface-variant text-[11px] opacity-40 uppercase tracking-[0.3em]">
+            © 2024 COFFEE NUTZ. CRAFTED IN MCKINNEY. THE VELVET HOUR AWAITS.
+        </p>
+</footer>
+<button class="fixed bottom-12 right-12 w-16 h-16 bg-tertiary text-on-tertiary flex items-center justify-center rounded-none shadow-2xl hover:bg-secondary transition-all duration-500 z-40">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_cafe</span>
+</button>
+</body></html>

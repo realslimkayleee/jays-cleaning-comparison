@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Menu — COFFEE NUTZ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#110e04",
+                        "primary-container": "#0e0e0e",
+                        "surface-dim": "#161308",
+                        "on-secondary-fixed": "#3e0408",
+                        "on-tertiary": "#3f2e00",
+                        "on-secondary": "#5b191a",
+                        "primary-fixed-dim": "#c9c6c5",
+                        "on-surface-variant": "#c4c7c7",
+                        "on-primary-fixed-variant": "#474646",
+                        "tertiary": "#e4c278",
+                        "tertiary-fixed-dim": "#e4c278",
+                        "outline": "#8e9192",
+                        "primary-fixed": "#e5e2e1",
+                        "primary": "#c9c6c5",
+                        "on-error": "#690005",
+                        "secondary-fixed-dim": "#ffb3af",
+                        "surface-bright": "#3d392b",
+                        "inverse-surface": "#eae2ce",
+                        "secondary-container": "#5C1A1B", // Deep Oxblood override for prompt
+                        "on-background": "#eae2ce",
+                        "surface": "#161308",
+                        "surface-tint": "#c9c6c5",
+                        "surface-container-high": "#2d2a1d",
+                        "inverse-primary": "#5f5e5e",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#ffdad8",
+                        "surface-variant": "#383527",
+                        "surface-container": "#232013",
+                        "secondary": "#ffb3af",
+                        "on-primary": "#313030",
+                        "on-surface": "#eae2ce",
+                        "inverse-on-surface": "#343023",
+                        "tertiary-fixed": "#ffdf9b",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-secondary-container": "#fe9a96",
+                        "surface-container-highest": "#383527",
+                        "on-tertiary-fixed": "#251a00",
+                        "on-tertiary-fixed-variant": "#5a4302",
+                        "background": "#161308",
+                        "on-secondary-fixed-variant": "#782f2f",
+                        "tertiary-container": "#150d00",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#7c7b7a",
+                        "outline-variant": "#444748",
+                        "surface-container-low": "#1f1c0f",
+                        "on-tertiary-container": "#947835",
+                        "error": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "section-gap": "128px",
+                        "margin-edge": "64px",
+                        "gutter": "24px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Newsreader", "serif"],
+                        "body-rt": ["Inter", "sans-serif"],
+                        "label-caps": ["Inter", "sans-serif"],
+                        "headline-md": ["Newsreader", "serif"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["80px", { "lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "400" }],
+                        "body-rt": ["16px", { "lineHeight": "1.8", "letterSpacing": "0.01em", "fontWeight": "300" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.2em", "fontWeight": "500" }],
+                        "headline-md": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>.film-grain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.04;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDfRVGPxofNpTzeudz7Aos8uW_CJ-OubF5StY-UQIoH0x5Whe09i4SSl-jcj-0Q_mJAKGC9oFNAuTYxCH9jDZ-x6IldFwtVSikUaoK21vLQxsKWA4cMuoXAUElXIPjFFdOViR-PTfNbDFTHTQMleHOVtarE5te8N4pFlZe6irrA1FJ962G_3nLMvIykDc-FQoLPi2tukRijOPbSctBVL3qweOubTWy3LLWCejOUnObEH-vlOPJsmpASU0tQTN4x0ON_wrG9D_-Da_fs)
+    }
+body {
+    background-color: #0E0E0E;
+    color: #eae2ce
+    }
+.menu-divider {
+    height: 1px;
+    background-color: #e4c278;
+    opacity: 0.3;
+    margin: 12px 0
+    }
+.transition-velvet {
+    transition: all 500ms cubic-bezier(0.65, 0, 0.35, 1)
+    }</style>
+</head>
+<body class="font-body-rt selection:bg-tertiary selection:text-on-tertiary">
+<div class="film-grain"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md flex justify-between items-center px-margin-edge py-8 w-full ease-[cubic-bezier(0.65,0,0.35,1)] transition-all duration-500">
+<div class="font-display-lg text-headline-md text-on-surface tracking-tighter">COFFEE NUTZ</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-label-caps text-label-caps tracking-[0.2em] text-tertiary/60 font-label-caps hover:text-primary transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]" href="#">HOME</a>
+<a class="font-label-caps text-label-caps tracking-[0.2em] text-tertiary border-b border-tertiary pb-1 hover:text-primary transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]" href="#">MENU</a>
+<a class="font-label-caps text-label-caps tracking-[0.2em] text-tertiary/60 font-label-caps hover:text-primary transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]" href="#">BEYOND COFFEE</a>
+<a class="font-label-caps text-label-caps tracking-[0.2em] text-tertiary/60 font-label-caps hover:text-primary transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]" href="#">FAQ</a>
+<a class="font-label-caps text-label-caps tracking-[0.2em] text-tertiary/60 font-label-caps hover:text-primary transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]" href="#">JOBS</a>
+</div>
+<button class="md:hidden text-tertiary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<main class="pt-40 pb-section-gap px-margin-edge">
+<!-- Hero Section -->
+<header class="text-center mb-section-gap max-w-4xl mx-auto">
+<span class="font-label-caps text-label-caps text-tertiary block mb-4 uppercase tracking-[0.3em]">The Velvet Selection</span>
+<h1 class="font-display-lg text-display-lg italic mb-8">Curated Rituals</h1>
+<p class="font-body-rt text-body-rt text-on-surface-variant max-w-xl mx-auto">
+                Step into the hushed sanctuary of flavor. Our menu is a meticulously crafted playbill of sensory experiences, from the bold ritual of espresso to the delicate notes of seasonal whispers.
+            </p>
+</header>
+<!-- Menu Container: Deep Oxblood Background Section -->
+<section class="bg-secondary-container rounded-lg p-12 md:p-24 shadow-[0_24px_48px_-12px_rgba(31,26,24,0.6)] relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent pointer-events-none"></div>
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-16">
+<!-- Column 1: Coffee & Beverages + Seasonal -->
+<div class="flex flex-col gap-16">
+<!-- Coffee & Beverages -->
+<div class="space-y-8">
+<div class="flex items-center gap-4">
+<h2 class="font-headline-md text-headline-md text-on-surface whitespace-nowrap">Coffee &amp; Beverages</h2>
+<div class="w-full h-[1px] bg-tertiary/20"></div>
+</div>
+<ul class="space-y-6">
+<li class="flex justify-between items-baseline group">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Espresso</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$4.00</span>
+</li>
+<li class="flex justify-between items-baseline group">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Cortado</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$5.00</span>
+</li>
+<li class="flex justify-between items-baseline group">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Flat White</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$5.50</span>
+</li>
+<li class="flex justify-between items-baseline group">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Cappuccino</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$5.75</span>
+</li>
+<li class="flex justify-between items-baseline group">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Cafe Latte</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$6.50</span>
+</li>
+<li class="flex justify-between items-baseline group">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Americano</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$4.50</span>
+</li>
+<li class="flex justify-between items-baseline group">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Cold Brew</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$5.00</span>
+</li>
+<li class="flex justify-between items-baseline group">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Iced Mont Blanc</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$5.50</span>
+</li>
+<li class="flex justify-between items-baseline group">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Drip Coffee</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$4.00</span>
+</li>
+</ul>
+</div>
+<!-- Seasonal -->
+<div class="space-y-8">
+<div class="flex items-center gap-4">
+<h2 class="font-headline-md text-headline-md text-on-surface italic">Seasonal Notes</h2>
+<div class="w-full h-[1px] bg-tertiary/20"></div>
+</div>
+<ul class="space-y-6">
+<li class="flex justify-between items-baseline group">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Iced Ube Coconut Latte</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$7.75</span>
+</li>
+<li class="flex justify-between items-baseline group">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Iced Ube Matcha</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$7.75</span>
+</li>
+<li class="flex justify-between items-baseline group">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Iced Momo Yuzu Tea</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$6.00</span>
+</li>
+<li class="flex justify-between items-baseline group">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Kyoto Dusk (Hojicha)</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$7.75</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Column 2: House Favorites + Food -->
+<div class="flex flex-col gap-16">
+<!-- House Favorites -->
+<div class="space-y-8">
+<div class="flex items-center gap-4">
+<h2 class="font-headline-md text-headline-md text-on-surface whitespace-nowrap">House Favorites</h2>
+<div class="w-full h-[1px] bg-tertiary/20"></div>
+</div>
+<ul class="space-y-6">
+<li class="flex justify-between items-baseline group">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Honey Bee Latte</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$7.50</span>
+</li>
+<li class="flex justify-between items-baseline group">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Iced Strawberry Matcha</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$7.75</span>
+</li>
+<li class="flex justify-between items-baseline group">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Golden Brown Latte</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$7.50</span>
+</li>
+<li class="flex justify-between items-baseline group">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Forest Latte</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$8.75</span>
+</li>
+<li class="flex justify-between items-baseline group">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Charcoal Latte</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$6.00</span>
+</li>
+</ul>
+</div>
+<!-- Food -->
+<div class="space-y-8">
+<div class="flex items-center gap-4">
+<h2 class="font-headline-md text-headline-md text-on-surface italic">The Kitchen</h2>
+<div class="w-full h-[1px] bg-tertiary/20"></div>
+</div>
+<ul class="space-y-6">
+<li class="flex flex-col group">
+<div class="flex justify-between items-baseline">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Avocado Toast</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$12.95</span>
+</div>
+</li>
+<li class="flex flex-col group">
+<div class="flex justify-between items-baseline">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Breakfast Melt</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$10.95</span>
+</div>
+</li>
+<li class="flex flex-col group">
+<div class="flex justify-between items-baseline">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Buttery Egg &amp; Cheese Croissant</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$10.95</span>
+</div>
+</li>
+<li class="flex flex-col group">
+<div class="flex justify-between items-baseline">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Golden Teriyaki Brioche</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$10.95</span>
+</div>
+</li>
+<li class="flex flex-col group">
+<div class="flex justify-between items-baseline">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">House Salad</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$11.95</span>
+</div>
+</li>
+<li class="flex flex-col group">
+<div class="flex justify-between items-baseline">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Traditional American Breakfast</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$9.95</span>
+</div>
+</li>
+<li class="flex flex-col group">
+<div class="flex justify-between items-baseline">
+<span class="font-body-rt text-body-rt text-on-surface group-hover:text-tertiary transition-velvet">Creamy Crab n Egg Sandwich</span>
+<span class="flex-grow border-b border-dotted border-tertiary/30 mx-4"></span>
+<span class="font-label-caps text-tertiary">$12.95</span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Aesthetic Imagery Component -->
+<section class="mt-section-gap grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="aspect-[4/5] bg-surface-variant relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-velvet group-hover:scale-110 filter grayscale contrast-125" data-alt="A low-key, moody close-up of a meticulously poured espresso with rich crema, illuminated by a single warm spotlight in a dark room. The aesthetic is dark and sophisticated, featuring deep oxblood tones and matte black shadows. A fine film grain texture overlays the cinematic, high-contrast composition, evoking the hushed reverence of an exclusive late-night sanctuary." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-2fdoecMY1kuORwr02VAe1s_yxnnbkIM10H1STn7Pz54CNGMI2WUoxv2jR-UqeucAcFFCtK8tc7kmgPqRVCBdmPQscMrXk47c61qUCdCEUcjCtoOjSByoCdMfPY6ddoNAy25_XgZfpXqSgkrFXqp3_qqjSLObUqZZgX59EEcwGYIKbzmzto1N-DHzKHHPLVaY4QNKQfFHQWjFzRUVNJjHiJtM67o2IyWS_r94gejlzu9xT_XSfAMIpSqTCGWPmXQ-gjtZUjQ9VQ0i"/>
+</div>
+<div class="aspect-[4/5] bg-surface-variant relative overflow-hidden group md:mt-24">
+<img class="w-full h-full object-cover transition-velvet group-hover:scale-110 filter grayscale contrast-125" data-alt="An elegant, minimalist shot of a tall iced latte with visible layers of ube purple and coconut milk, sitting on a brass-accented countertop. The background is a velvety dark oxblood shade. Lighting is soft yet dramatic, casting long shadows. The overall mood is luxurious and calm, adhering to the Velvet Hour design system with high-contrast typography in the surroundings." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUQtiCavZISB-w2bzt02snj1r4_pJuAskpRg9RCVpOOwmxPYCaMBOlOQap4j5ok6ocHc1wJfgKCsQbRNRM0Q51squ2BWzrkoBJclMmzY210K-teEni9oeLzYC583fnAqIG50069kUQX7UjRjbn8I9BgZrxX5cAGUXjA-uyfDnw0422cmLzyzcYgZpLSCY1GEfmw7QOO3spEBBoky9k3ewMgFGW4fwI9LoIimcOv0zJGYpViLHgcj9Q0zKKtTT12-I-CenURb9IIYE3"/>
+</div>
+<div class="aspect-[4/5] bg-surface-variant relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-velvet group-hover:scale-110 filter grayscale contrast-125" data-alt="A cinematic, low-lighting view of a buttery breakfast croissant sandwich served on a deep oxblood ceramic plate. The setting is an intimate, dark-themed cafe with brass details glimmering in the background. High contrast between the warm golden croissant and the surrounding matte black environment creates a tactile, luxurious feeling. Film grain softens the digital sharpness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE-yFkTEBhd8m13RsIZ0EiB_2IxQT0qzkAWzgnWI_fP8FCy5BpmFUAynq1-Xv2Nes-TD9oCdSjtB35vnGKEgqqcK_R_J6IdIEhsD8Hp_daymIcdplJcvLF0xILGXR7Ti-aLxLgAfKXbqd_si6IbY3KYzrcgVYt09ZomEWzXLEXne_aJlzg8oFppiVAmtAGrt52qct7JehXdmn6fYR7iZZe_5ByCAk3H3gfcts96soD90IWc_6m2z5HwytlhaGAVpEPzi-9bZnXAUEU"/>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest text-on-surface flex flex-col items-center gap-12 py-section-gap px-margin-edge text-center border-t border-tertiary/10 mt-section-gap relative bottom-0">
+<div class="font-display-lg text-headline-md text-tertiary">COFFEE NUTZ</div>
+<div class="flex flex-wrap justify-center gap-8 md:gap-16">
+<a class="font-body-rt text-body-rt text-on-surface-variant hover:text-tertiary transition-all duration-300" href="#">CONTACT</a>
+<a class="font-body-rt text-body-rt text-on-surface-variant hover:text-tertiary transition-all duration-300" href="#">HOURS</a>
+<a class="font-body-rt text-body-rt text-on-surface-variant hover:text-tertiary transition-all duration-300" href="#">NEWSLETTER</a>
+<a class="font-body-rt text-body-rt text-on-surface-variant hover:text-tertiary transition-all duration-300" href="#">JOIN THE CLUB</a>
+</div>
+<p class="font-body-rt text-body-rt text-on-surface-variant opacity-60 tracking-widest uppercase text-[10px]">
+            © 2024 COFFEE NUTZ. CRAFTED IN MCKINNEY. THE VELVET HOUR AWAITS.
+        </p>
+</footer>
+</body></html>

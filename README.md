@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Coffee Nutz · Website Concepts
 
-## Getting Started
+This is a polished, password-protected client preview site designed to present three distinct website design concepts to the owner of Coffee Nutz. It's built with Next.js 14 and Tailwind CSS, providing a high-end, editorial presentation format that feels like a customized deliverable.
 
-First, run the development server:
+## How to add screenshots
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+To add your concept designs to the site, simply drop your PNG or JPG files into the respective folders inside `public/images/`:
+- `public/images/concept-a/` (Velvet Hour)
+- `public/images/concept-b/` (Field Notes)
+- `public/images/concept-c/` (Sunday Bright)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Make sure your files exactly match these expected filenames for each concept:
+- `home-desktop.png`
+- `home-mobile.png`
+- `menu.png`
+- `drink-detail.png`
+- `beyond-coffee.png`
+- `faq.png`
+- `jobs.png`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+*(If an image is missing, the site will elegantly display a colored placeholder with the filename).*
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How to edit copy
 
-## Learn More
+- **Concept Details, Quotes, & Placeholders:** Edit `lib/concepts.ts`. This is where you can change the name, date, email, as well as the rationale and pull quotes for each concept.
+- **Section Headers & Static Text:** Edit the components directly or adjust `app/page.tsx` if you need to modify structural or intro text.
 
-To learn more about Next.js, take a look at the following resources:
+## How to change the password
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To update the password:
+1. **Locally:** Edit the `PREVIEW_PASSWORD` variable in your `.env.local` file.
+2. **Production:** Update the `PREVIEW_PASSWORD` environment variable in your Vercel project dashboard.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## How to deploy
 
-## Deploy on Vercel
+You can deploy the site easily via Vercel:
+1. Run `vercel deploy --prod` from the project root using the Vercel CLI.
+2. **Or**, push this repository to GitHub and connect it to your Vercel dashboard for automatic deployments.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Make sure to configure the `PREVIEW_PASSWORD` environment variable in Vercel before sharing the link.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## How to share
+
+Once deployed, send the live Vercel URL and the password to your client. 
+When they log in, an authentication cookie is set that will keep them logged in for **7 days**.

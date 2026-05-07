@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,700&amp;family=Inter:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#110e04",
+                    "primary-container": "#0e0e0e",
+                    "surface-dim": "#161308",
+                    "on-secondary-fixed": "#3e0408",
+                    "on-tertiary": "#3f2e00",
+                    "on-secondary": "#5b191a",
+                    "primary-fixed-dim": "#c9c6c5",
+                    "on-surface-variant": "#c4c7c7",
+                    "on-primary-fixed-variant": "#474646",
+                    "tertiary": "#e4c278",
+                    "tertiary-fixed-dim": "#e4c278",
+                    "outline": "#8e9192",
+                    "primary-fixed": "#e5e2e1",
+                    "primary": "#c9c6c5",
+                    "on-error": "#690005",
+                    "secondary-fixed-dim": "#ffb3af",
+                    "surface-bright": "#3d392b",
+                    "inverse-surface": "#eae2ce",
+                    "secondary-container": "#782f2f",
+                    "on-background": "#eae2ce",
+                    "surface": "#161308",
+                    "surface-tint": "#c9c6c5",
+                    "surface-container-high": "#2d2a1d",
+                    "inverse-primary": "#5f5e5e",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed": "#ffdad8",
+                    "surface-variant": "#383527",
+                    "surface-container": "#232013",
+                    "secondary": "#ffb3af",
+                    "on-primary": "#313030",
+                    "on-surface": "#eae2ce",
+                    "inverse-on-surface": "#343023",
+                    "tertiary-fixed": "#ffdf9b",
+                    "on-primary-fixed": "#1c1b1b",
+                    "on-secondary-container": "#fe9a96",
+                    "surface-container-highest": "#383527",
+                    "on-tertiary-fixed": "#251a00",
+                    "on-tertiary-fixed-variant": "#5a4302",
+                    "background": "#161308",
+                    "on-secondary-fixed-variant": "#782f2f",
+                    "tertiary-container": "#150d00",
+                    "error-container": "#93000a",
+                    "on-primary-container": "#7c7b7a",
+                    "outline-variant": "#444748",
+                    "surface-container-low": "#1f1c0f",
+                    "on-tertiary-container": "#947835",
+                    "error": "#ffb4ab"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "section-gap": "128px",
+                    "margin-edge": "64px",
+                    "gutter": "24px",
+                    "container-max": "1200px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Newsreader"],
+                    "body-rt": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "headline-md": ["Newsreader"]
+            },
+            "fontSize": {
+                    "display-lg": ["80px", {"lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "400"}],
+                    "body-rt": ["16px", {"lineHeight": "1.8", "letterSpacing": "0.01em", "fontWeight": "300"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.2em", "fontWeight": "500"}],
+                    "headline-md": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>.film-grain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.04;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBDX3oV3HwvnHp1rzuAJdR1vw68w47cIRnvr6na7TaBcLwqWwCa0fUD5wc4R9RQSNYobAex5dnoVV0CuMdYa3HK_aao4YJwxcYpUMa9P9Gowe7lPYAHgwnvFStP1Txd3Gi0MWshhjBh0AtLk9-yLVKW7URHg-FPwX5NbeGozJjbXzi6mv2_ngoP-jl6b2lbNsnsqf7s_GDZKrup5RPdCXuQDBQJoRpbB3l0VGmIkKa-cYFgEcE0E3WNjLxR5BZ4Bpw_b4uw8aMj8lOn)
+    }
+.custom-bezier {
+    transition-timing-function: cubic-bezier(0.65, 0, 0.35, 1)
+    }
+details > summary {
+    list-style: none
+    }
+details > summary::-webkit-details-marker {
+    display: none
+    }</style>
+</head>
+<body class="bg-surface text-on-surface font-body-rt selection:bg-tertiary selection:text-on-tertiary">
+<div class="film-grain"></div>
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md">
+<nav class="flex justify-between items-center px-margin-edge py-8 w-full">
+<div class="font-display-lg text-headline-md text-on-surface tracking-tighter">COFFEE NUTZ</div>
+<div class="hidden md:flex gap-12">
+<a class="font-label-caps text-label-caps tracking-[0.2em] text-tertiary/60 hover:text-primary transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]" href="#">HOME</a>
+<a class="font-label-caps text-label-caps tracking-[0.2em] text-tertiary/60 hover:text-primary transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]" href="#">MENU</a>
+<a class="font-label-caps text-label-caps tracking-[0.2em] text-tertiary/60 hover:text-primary transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]" href="#">BEYOND COFFEE</a>
+<a class="font-label-caps text-label-caps tracking-[0.2em] text-tertiary border-b border-tertiary pb-1 transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]" href="#">FAQ</a>
+<a class="font-label-caps text-label-caps tracking-[0.2em] text-tertiary/60 hover:text-primary transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]" href="#">JOBS</a>
+</div>
+<button class="md:hidden text-tertiary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main class="pt-48 px-margin-edge flex flex-col items-center">
+<!-- Hero Section -->
+<section class="max-w-container-max w-full text-center mb-section-gap">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-8">Inquiries.</h1>
+<p class="font-body-rt text-on-surface-variant max-w-2xl mx-auto opacity-80">
+                A repository of shared knowledge for those who seek the velvet ritual. Should your question remain unanswered, the silence of our craft is the only remaining response.
+            </p>
+</section>
+<!-- FAQ Accordion -->
+<section class="max-w-4xl w-full mb-section-gap">
+<div class="flex flex-col">
+<!-- Item 1 -->
+<div class="border-t border-tertiary/20 py-10 group">
+<details class="group">
+<summary class="flex justify-between items-center cursor-pointer list-none">
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-tertiary transition-colors duration-500 custom-bezier">The Sourcing Philosophy</h3>
+<span class="material-symbols-outlined text-tertiary transition-transform duration-500 group-open:rotate-180 custom-bezier">expand_more</span>
+</summary>
+<div class="mt-8 pr-12 overflow-hidden transition-all duration-700 custom-bezier">
+<p class="font-body-rt text-on-surface-variant leading-relaxed">
+                                Our beans are curated through direct-trade relationships that prioritize the longevity of the micro-lot. We do not negotiate on price; we negotiate on quality. Each batch is a singular expression of high-altitude terroir, roasted in small batches under the watchful eye of our head roaster in McKinney.
+                            </p>
+</div>
+</details>
+</div>
+<!-- Item 2 -->
+<div class="border-t border-tertiary/20 py-10 group">
+<details class="group">
+<summary class="flex justify-between items-center cursor-pointer list-none">
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-tertiary transition-colors duration-500 custom-bezier">The Velvet Hour Ritual</h3>
+<span class="material-symbols-outlined text-tertiary transition-transform duration-500 group-open:rotate-180 custom-bezier">expand_more</span>
+</summary>
+<div class="mt-8 pr-12 overflow-hidden transition-all duration-700 custom-bezier">
+<p class="font-body-rt text-on-surface-variant leading-relaxed">
+                                As the sun sets, our space transforms. The lighting is dimmed to a precise lux level to foster introspection. We ask that guests respect the hallowed nature of this transition. Laptops are discouraged after 6 PM to allow for the tactile luxury of conversation and the slow consumption of our signature brews.
+                            </p>
+</div>
+</details>
+</div>
+<!-- Item 3 -->
+<div class="border-t border-tertiary/20 py-10 group">
+<details class="group">
+<summary class="flex justify-between items-center cursor-pointer list-none">
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-tertiary transition-colors duration-500 custom-bezier">Brewing Methodologies</h3>
+<span class="material-symbols-outlined text-tertiary transition-transform duration-500 group-open:rotate-180 custom-bezier">expand_more</span>
+</summary>
+<div class="mt-8 pr-12 overflow-hidden transition-all duration-700 custom-bezier">
+<p class="font-body-rt text-on-surface-variant leading-relaxed">
+                                We utilize custom-modified espresso machines and precision pour-over techniques. Our water is triple-filtered and mineral-adjusted to a specific TDS (Total Dissolved Solids) count to ensure the delicate acidity of our light roasts is preserved, never masked.
+                            </p>
+</div>
+</details>
+</div>
+<!-- Item 4 -->
+<div class="border-t border-tertiary/20 py-10 group">
+<details class="group">
+<summary class="flex justify-between items-center cursor-pointer list-none">
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-tertiary transition-colors duration-500 custom-bezier">Private Engagements</h3>
+<span class="material-symbols-outlined text-tertiary transition-transform duration-500 group-open:rotate-180 custom-bezier">expand_more</span>
+</summary>
+<div class="mt-8 pr-12 overflow-hidden transition-all duration-700 custom-bezier">
+<p class="font-body-rt text-on-surface-variant leading-relaxed">
+                                For those wishing to host a gathering within our walls, we offer evening buyout options. These are limited and require a formal proposal. Our space is best suited for intimate salons, quiet celebrations, and focused artistic discussions.
+                            </p>
+</div>
+</details>
+</div>
+<!-- Item 5 -->
+<div class="border-t border-b border-tertiary/20 py-10 group">
+<details class="group">
+<summary class="flex justify-between items-center cursor-pointer list-none">
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-tertiary transition-colors duration-500 custom-bezier">The Beyond Coffee Selection</h3>
+<span class="material-symbols-outlined text-tertiary transition-transform duration-500 group-open:rotate-180 custom-bezier">expand_more</span>
+</summary>
+<div class="mt-8 pr-12 overflow-hidden transition-all duration-700 custom-bezier">
+<p class="font-body-rt text-on-surface-variant leading-relaxed">
+                                While our heart beats for coffee, our soul wanders. Our botanical infusions and curated wines are selected with the same rigor as our beans. They represent the periphery of our craft—elements that complement the coffee experience without competing for the spotlight.
+                            </p>
+</div>
+</details>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-container-max w-full flex flex-col items-center mb-section-gap">
+<div class="bg-secondary-container p-16 w-full max-w-4xl flex flex-col items-center text-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 pointer-events-none"></div>
+<h2 class="font-display-lg text-headline-md text-tertiary mb-6 relative z-10">Still Curious?</h2>
+<p class="font-body-rt text-on-surface mb-12 max-w-lg relative z-10 opacity-90">Reach out to our McKinney studio. We respond with intent and deliberation.</p>
+<a class="px-12 py-4 border border-tertiary text-on-surface font-label-caps text-label-caps tracking-widest hover:bg-on-secondary transition-all duration-500 custom-bezier relative z-10" href="mailto:contact@coffeenutz.com">CONTACT US</a>
+</div>
+</section>
+<!-- Visual Anchor -->
+<section class="w-full h-[600px] mb-section-gap relative">
+<img alt="Coffee Nutz Sanctuary" class="w-full h-full object-cover filter grayscale brightness-50" data-alt="A cinematic, low-key photograph of a high-end coffee roastery at night. Warm spotlights illuminate a vintage brass espresso machine and stacks of dark porcelain cups against a matte black wall. Deep oxblood red velvet curtains hang in the periphery, catching the soft glow. The air is thick with a sense of quiet luxury, meticulous craft, and the hushed atmosphere of a 1940s supper club. Fine film grain and heavy vignetting enhance the moody, exclusive aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNIxVYn6jaRHnYY6z3S8_fvRl7XIUwKT2VoTxbq0sNEZL6n7FvuSYFEUeTiJ5COQkcjxO9eSKAmipzoJ1CArBgU4tJ7Qnpi9v1kSzbjT_s401HE3dJzSflHZe2pF5mNdcNmqfNPY1Q2L1-KnbYz2ajX2H99sQVS3_YJJ7UWd8i4xoJhhwinhzujKPUcKCLMT3wjx8tSvdr6XUYP642lyy_0wfwUZ5F985B18UDB0hpnkpdgJk0p3KnP3TBzmk7RPrKx0nemxwsj72k"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full relative bottom-0 border-t border-tertiary/10 mt-section-gap bg-surface-container-lowest dark:bg-surface-container-lowest">
+<div class="flex flex-col items-center gap-12 py-section-gap px-margin-edge text-center">
+<div class="font-display-lg text-headline-md text-tertiary">COFFEE NUTZ</div>
+<div class="flex flex-wrap justify-center gap-8 md:gap-16">
+<a class="font-body-rt text-body-rt text-on-surface-variant hover:text-tertiary transition-all duration-300" href="#">CONTACT</a>
+<a class="font-body-rt text-body-rt text-on-surface-variant hover:text-tertiary transition-all duration-300" href="#">HOURS</a>
+<a class="font-body-rt text-body-rt text-on-surface-variant hover:text-tertiary transition-all duration-300" href="#">NEWSLETTER</a>
+<a class="font-body-rt text-body-rt text-on-surface-variant hover:text-tertiary transition-all duration-300" href="#">JOIN THE CLUB</a>
+</div>
+<p class="font-label-caps text-label-caps tracking-widest text-on-surface-variant/40 mt-12">
+                © 2024 COFFEE NUTZ. CRAFTED IN MCKINNEY. THE VELVET HOUR AWAITS.
+            </p>
+</div>
+</footer>
+</body></html>
