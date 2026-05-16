@@ -10,9 +10,7 @@
   --btn-bg: #ffffff;
   --btn-text: #16161A;
 
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   height: 56px;
   /* Respect iOS safe-area-inset */

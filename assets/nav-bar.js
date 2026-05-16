@@ -63,22 +63,7 @@
 
     // Wait until document.body is available
     const appendBar = () => {
-      document.body.appendChild(bar);
-
-      // Push body down so the concept header isn't covered
-      // Account for mobile (56px) and desktop (64px) + safe area inset
-      const style = document.createElement('style');
-      style.textContent = `
-        body {
-          padding-top: calc(56px + env(safe-area-inset-top, 0px)) !important;
-        }
-        @media (min-width: 768px) {
-          body {
-            padding-top: calc(64px + env(safe-area-inset-top, 0px)) !important;
-          }
-        }
-      `;
-      document.head.appendChild(style);
+      document.body.insertBefore(bar, document.body.firstChild);
     };
 
     if (document.body) {
