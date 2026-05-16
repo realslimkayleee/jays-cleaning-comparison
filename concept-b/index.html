@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "brick-red": "#A8412B",
+                    "on-secondary-container": "#67645c",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "tertiary": "#000000",
+                    "surface-container-high": "#ebe7e6",
+                    "on-primary-container": "#858383",
+                    "secondary": "#615e56",
+                    "newsprint-gray": "#D4D0C8",
+                    "surface-container": "#f1edec",
+                    "on-secondary-fixed-variant": "#49473f",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#e5e2e1",
+                    "tertiary-fixed": "#e6e2df",
+                    "tertiary-container": "#1c1b1a",
+                    "tertiary-fixed-dim": "#cac6c4",
+                    "on-primary": "#ffffff",
+                    "primary": "#000000",
+                    "secondary-fixed": "#e7e2d7",
+                    "on-primary-fixed-variant": "#474746",
+                    "error-container": "#ffdad6",
+                    "on-background": "#1c1b1b",
+                    "on-tertiary-fixed": "#1c1b1a",
+                    "outline": "#747878",
+                    "inverse-primary": "#c8c6c5",
+                    "on-tertiary-fixed-variant": "#484645",
+                    "secondary-container": "#e7e2d7",
+                    "surface-dim": "#ddd9d8",
+                    "outline-variant": "#c4c7c7",
+                    "on-tertiary-container": "#868382",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e5e2e1",
+                    "inverse-surface": "#313030",
+                    "on-secondary-fixed": "#1d1c15",
+                    "primary-container": "#1c1b1b",
+                    "surface-tint": "#5f5e5e",
+                    "on-surface-variant": "#444748",
+                    "inverse-on-surface": "#f4f0ef",
+                    "field-navy": "#2E3A4F",
+                    "surface-container-low": "#f7f3f2",
+                    "on-surface": "#1c1b1b",
+                    "surface-bright": "#fdf8f8",
+                    "surface": "#fdf8f8",
+                    "background": "#fdf8f8",
+                    "on-primary-fixed": "#1c1b1b",
+                    "surface-variant": "#e5e2e1",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#cac6bc"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "120px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "margin-desktop": "80px",
+                    "margin-tablet": "40px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["EB Garamond"],
+                    "body-md": ["Inter"],
+                    "headline-display": ["EB Garamond"],
+                    "headline-md": ["EB Garamond"],
+                    "headline-lg-mobile": ["EB Garamond"],
+                    "body-lg": ["Inter"],
+                    "marginalia": ["EB Garamond"],
+                    "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-display": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "marginalia": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fdf8f8;
+            color: #1c1b1b
+        }
+        .film-grain {
+            position: relative
+        }
+        .film-grain::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAWsBaQ4164zJGWrtEs0tsgMPf2DZaSneZHpiTqizDWQ6dmlSXlwDYIxyikBqu5JjkT0BFWvSzwJEoGlF2FZZSuTBfL1DhRP4EcJcEFIwAd-18bVaMOagoFDNsBXcc-PegRhFB2zjkdIxbccB7nh4aPn_hp0048iK99l-Au0eUExQqhkeCe4YEZYOv_vhj6DSdSwLgJhSQW4xv5_R536Q3j6adVFkpJ_X1Cevrv4ZL38aUEoMER9vibu1vre8ffEtxDDcUMBvYy6KhL);
+            opacity: 0.15;
+            pointer-events: none
+        }
+        .marker-underline {
+            background-image: linear-gradient(120deg, #A8412B 0%, #A8412B 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 0.2em;
+            background-position: 0 95%
+        }
+        .editorial-line {
+            height: 1px;
+            background-color: #1c1b1b;
+            width: 100%
+        }
+        .roman-numeral {
+            font-family: "EB Garamond", serif;
+            font-style: italic;
+            color: #A8412B
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style data-stitch-cursor=""></style><style data-stitch-scroll-lock=""></style></head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 bg-background/90 backdrop-blur-sm border-b border-primary">
+<div class="font-headline-display text-headline-md tracking-tighter text-primary">CREW</div>
+<div class="font-label-caps text-label-caps text-primary">(503) 849-2231</div>
+</header>
+<main class="pt-20">
+<!-- 1. THE COVER -->
+<section class="min-h-[795px] flex flex-col justify-between px-margin-mobile py-10 relative">
+<div class="z-10 mt-4">
+<p class="font-label-caps text-label-caps tracking-widest mb-2">ISSUE NO. 01  A PORTLAND, TX CLEANING COMPANY  EST. 2017</p>
+<div class="editorial-line mb-8"></div>
+</div>
+<div class="z-10">
+<h1 class="font-headline-display text-headline-display mb-4">We are Jay's Cleaning Services.<span class="absolute bottom-1 left-0 w-full h-1 bg-brick-red opacity-80" style="clip-path: polygon(0 20%, 100% 0%, 98% 100%, 2% 80%);"></span></h1>
+<p class="font-headline-md text-headline-md italic max-w-[80%]">Providing artisanal cleaning in Portland, TX since 2017.</p>
+</div>
+<div class="w-full h-[442px] mt-8 film-grain overflow-hidden">
+<img alt="Black and white documentary photo of a stack of clean, folded linen cloths on a rustic wooden table. High grain, natural light, editorial style. Focus on texture and the dignity of the tools. No people." class="w-full h-full object-cover grayscale contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3I4A1XDbUxkSDKB9bXxIPfH2OaGTOJj3dGu9mnm1mmc8a1mwX8YT7g3hjTxncTeWf4uzRG-rq9rd39Qu1QSy62JGNRNQLsPE-FKKBIJZe5Xb0Wolef5ApsY-A714i19p4nzAjz__ZTFI7xKu7a0Mv4WaWHrOqtAhM1le9gFV9NX1kIquOAUWOCzReneY3xBRNIeWeYj01DJeDXQWKbQT8zQE4JyWP_jkc7udUBc4OPR_G6_uuh7XHErzvwOD4iT4cng4NiQPV2Iwv"/>
+</div>
+</section>
+<!-- 2. THE MASTHEAD -->
+<section class="min-h-[530px] flex flex-col items-center justify-center px-margin-mobile text-center bg-surface-container-low py-20">
+<h2 class="font-headline-display text-headline-lg-mobile tracking-tighter mb-12 border-y border-primary py-4 w-full">JAY'S CLEANING SERVICES</h2>
+<nav class="w-full max-w-sm flex flex-col gap-6 text-left">
+<div class="flex items-center gap-4 group">
+<span class="roman-numeral text-headline-md">I.</span>
+<span class="font-label-caps text-body-lg tracking-widest border-b border-transparent group-hover:border-brick-red transition-all">THE WORK</span>
+</div>
+<div class="flex items-center gap-4 group">
+<span class="roman-numeral text-headline-md">II.</span>
+<span class="font-label-caps text-body-lg tracking-widest border-b border-transparent group-hover:border-brick-red transition-all">THE SERVICES</span>
+</div>
+<div class="flex items-center gap-4 group">
+<span class="roman-numeral text-headline-md">III.</span>
+<span class="font-label-caps text-body-lg tracking-widest border-b border-transparent group-hover:border-brick-red transition-all">THE PLACE</span>
+</div>
+<div class="flex items-center gap-4 group">
+<span class="roman-numeral text-headline-md">IV.</span>
+<span class="font-label-caps text-body-lg tracking-widest border-b border-transparent group-hover:border-brick-red transition-all">THE PROMISE</span>
+</div>
+</nav>
+</section>
+<!-- 3. CHAPTER I — THE WORK -->
+<section class="py-section-gap px-margin-mobile">
+<div class="flex items-baseline gap-2 mb-12">
+<span class="roman-numeral text-headline-md">I.</span>
+<h3 class="font-label-caps text-label-caps tracking-widest">THE WORK</h3>
+</div>
+<div class="space-y-12">
+<div class="relative">
+<div class="film-grain aspect-[4/5] mb-4">
+<img alt="A gritty, black and white close-up shot of a janitor's hands wringing out a cleaning cloth over a bucket. High contrast and heavy film grain emphasize the physical nature of the labor. The lighting is directional, catching the droplets of water and the texture of the fabric. The aesthetic is strictly documentary and editorial, avoiding any corporate gloss." class="w-full h-full object-cover grayscale contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL_v3kkwHXs8YIC4Ntl8UUXz0Ph02JeecmeivhdAkVW6GZV1nrw85fCro1qN7xQJWCxktTyvHmT8oo-eEzcxFcRlBowS8RrTNRmaosp8_UkUfuYuB0v0MTCNpAkwNsqarvZuJzc6ph837TT81Zx65-yvT0yCNWgKdR8KxGUtXCH5fnZlAGb02hqffFyYMvj4DOD7aJTDTR7Dw_vyrWn7bFz6kM9-Dd3SXEvwsmGwAwaw4axlefO0xM0AbwYXn-APC3nh7SDXgO_aMG"/>
+</div>
+<p class="font-marginalia text-marginalia italic">Marisol — Janitorial Service, NW Portland</p>
+</div>
+<div class="border-l-4 border-brick-red pl-6 my-16">
+<blockquote class="font-headline-lg-mobile text-headline-lg-mobile italic mb-4">
+                    "We don't subcontract anyone. Every cleaner is ours."
+                </blockquote>
+<cite class="font-label-caps text-label-caps tracking-widest not-italic">— JAY</cite>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="film-grain aspect-square">
+<img alt="Black and white documentary photo of professional cleaning tools: a vintage-style metal bucket and a wooden-handled brush resting against a white tiled wall. High grain, natural light. No people." class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcBvfQtQ-uuXWdbLdferneIwzVCzVWoTKlAKrDIvAqlFn9Lkrm3ZMue4mwnxj7MCeGtj0wAfRGt7S17HLPQGU2kYcGmv3x-ynmyBpy1mve6qiBqQ6flI7DUUK7yc1FMtHm4CfPujuWxlNMgDlFyI6BInVj43MT2JS8aCg9kzsYrqq2QbnBAToHy4Ar98U3wB4dA_DY_5-U52kEkQyUimUDex6DbntMK8q1N7ZufkKxVtyxUidgwZ9KdQYNS9aOpCYpA-6I1S3OTgPm"/>
+</div>
+<div class="film-grain aspect-square mt-8">
+<img alt="A high-contrast black and white shot of a meticulously cleaned architectural surface in a Portland home. The focus is on the interplay of light and shadow on the wood and glass. The mood is serene and exhibits the high quality of the cleaning work through a documentary lens. No people are present, focusing instead on the result of the labor." class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqohFzjsmHv1P3tIpzxAVmUyzm7Q7UlTfVviyV_afIXwJnTBE_06oXVctDpvAPf1gHY-t_dT-2-o2EescSy1EmO_ArlajRDzm9O6Dlb_-Q5hhiO9Wt18xP6EFcCJ5oVBDjcYmPM6l-Q53rAMg4uGeR9KTkQs3C4RgfmMnTMIsy2rkt2G-pjHxFv_7xC5QyoLToc-WhYR3c6B55VZUMPouMP56ptHVPzs3x_BzNB8qpUqKsFh0AATVKcZ0HhX1N3bIRjuAlpuM-teTI"/>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. CHAPTER II — THE SERVICES -->
+<section class="py-section-gap px-margin-mobile bg-newsprint-gray/20">
+<div class="flex items-baseline gap-2 mb-12">
+<span class="roman-numeral text-headline-md">II.</span>
+<h3 class="font-label-caps text-label-caps tracking-widest">THE SERVICES</h3>
+</div>
+<div class="flex flex-col border-t border-primary">
+<div class="py-8 border-b border-primary flex justify-between items-end">
+<div>
+<span class="roman-numeral text-body-md block mb-1">I.</span>
+<h4 class="font-headline-md text-headline-md">JANITORIAL</h4>
+</div>
+<div class="w-12 h-[1px] bg-brick-red mb-3"></div>
+</div>
+<div class="py-8 border-b border-primary flex justify-between items-end">
+<div>
+<span class="roman-numeral text-body-md block mb-1">II.</span>
+<h4 class="font-headline-md text-headline-md">MOVE-IN &amp; MOVE-OUT</h4>
+</div>
+<div class="w-12 h-[1px] bg-brick-red mb-3"></div>
+</div>
+<div class="py-8 border-b border-primary flex justify-between items-end">
+<div>
+<span class="roman-numeral text-body-md block mb-1">III.</span>
+<h4 class="font-headline-md text-headline-md">JUNK REMOVAL</h4>
+</div>
+<div class="w-12 h-[1px] bg-brick-red mb-3"></div>
+</div>
+<div class="py-8 border-b border-primary flex justify-between items-end">
+<div>
+<span class="roman-numeral text-body-md block mb-1">IV.</span>
+<h4 class="font-headline-md text-headline-md">TRASH VALET</h4>
+</div>
+<div class="font-label-caps text-label-caps tracking-widest text-brick-red mb-2">$1.25–$2.25</div>
+</div>
+</div>
+</section>
+<!-- 5. CHAPTER III — THE PLACE -->
+<section class="py-section-gap">
+<div class="px-margin-mobile flex items-baseline gap-2 mb-8">
+<span class="roman-numeral text-headline-md">III.</span>
+<h3 class="font-label-caps text-label-caps tracking-widest">THE PLACE</h3>
+</div>
+<div class="film-grain w-full h-[353px] mb-12">
+<img alt="Black and white documentary photo of a Portland residential street at dawn, wet pavement reflecting streetlights, misty atmosphere. High grain, editorial style. No people." class="w-full h-full object-cover grayscale contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp9mlw_Bj0sfHsrLdfKJJsaTTEs_uAwVKIsOHO3RpXuvWpOqU2m4xHgaS7A17Lzi2OPRKdyBJuDhPW2A8f5HZlD2_XYIZh6WCpwiR42y-V4WpBCM3HxxNyQFqbyFqrXi_eiQK9dwg29mfo2l40AXhGG9maxTY4RdyDoF2DVxtYziHC_gtBLwH06r_aIRy2winbaWpf6GlkfE7d-N8lsqrW8G7bkBCKyQLX8lNsb78oFdoLzpIGj_Qc_bk6mGDp3FH3IEDf6sPo40ZO"/>
+</div>
+<div class="px-margin-mobile">
+<p class="font-headline-md text-headline-md italic mb-8">"We work where we live."</p>
+<div class="flex flex-wrap gap-x-8 gap-y-4">
+<span class="font-label-caps text-label-caps tracking-widest border-b border-brick-red pb-1">PORTLAND</span>
+<span class="font-label-caps text-label-caps tracking-widest border-b border-brick-red pb-1">GRESHAM</span>
+<span class="font-label-caps text-label-caps tracking-widest border-b border-brick-red pb-1">BEAVERTON</span>
+<span class="font-label-caps text-label-caps tracking-widest border-b border-brick-red pb-1">TIGARD</span>
+<span class="font-label-caps text-label-caps tracking-widest border-b border-brick-red pb-1">HILLSBORO</span>
+</div>
+</div>
+</section>
+<!-- 6. CHAPTER IV — THE PROMISE -->
+<section class="py-section-gap px-margin-mobile text-center">
+<div class="flex flex-col items-center gap-2 mb-16">
+<span class="roman-numeral text-headline-md">IV.</span>
+<h3 class="font-label-caps text-label-caps tracking-widest">THE PROMISE</h3>
+</div>
+<div class="space-y-12">
+<div class="group">
+<p class="font-headline-lg-mobile text-headline-lg-mobile transition-colors group-hover:text-brick-red">Eight years in business.</p>
+<div class="editorial-line mt-4 max-w-[40px] mx-auto"></div>
+</div>
+<div class="group">
+<p class="font-headline-lg-mobile text-headline-lg-mobile transition-colors group-hover:text-brick-red">Insured and bonded.</p>
+<div class="editorial-line mt-4 max-w-[40px] mx-auto"></div>
+</div>
+<div class="group">
+<p class="font-headline-lg-mobile text-headline-lg-mobile transition-colors group-hover:text-brick-red">Locally owned and operated.</p>
+<div class="editorial-line mt-4 max-w-[40px] mx-auto"></div>
+</div>
+</div>
+</section>
+<!-- 7. COLOPHON -->
+<section class="pt-section-gap px-margin-mobile bg-primary text-background text-center flex flex-col items-center pb-20">
+<div class="w-full h-64 mb-12 film-grain overflow-hidden">
+<img alt="Black and white documentary photo of a clean, empty high-ceilinged industrial loft in Portland. Light streaming through large windows hitting the floor. High grain, cinematic, quiet atmosphere. No people." class="w-full h-full object-cover grayscale contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyC5hnYe_XRybehuRUwpyhGK9XmkIvuZIhkYk3hWU0PVZWDmt8HR0liL7jyBPA373P4wd964OKTGo2Q988Ut4eFU7pDz4QBFyghMRxfQZtVUYmnsF7MXCwfWmNrGmpMj8fPhR9FeIvIlOollGEaVt_veUbgrGdft7dgcc4f9i-IYZy9HZK0f_5ciMnxFb5w1mU59MOw4AlYxeyhtMlF3wL62dPKbnR0AqNUD9yto-gKhSRaYcQhJ760qOYAWD1oQ2R3OY2qHK0cEdW"/>
+</div>
+<div class="font-headline-display text-headline-display tracking-tighter mb-8 text-background">CREW</div>
+<p class="font-headline-md text-headline-md italic mb-12">— Jay &amp; the crew</p>
+<div class="flex flex-col w-full gap-4 max-w-xs">
+<button class="bg-brick-red text-background font-label-caps text-label-caps tracking-widest py-5 px-8 hover:bg-opacity-90 transition-all">GET A QUOTE</button>
+<button class="border border-background text-background font-label-caps text-label-caps tracking-widest py-5 px-8 hover:bg-background hover:text-primary transition-all">APPLY TO WORK</button>
+<button class="font-label-caps text-label-caps tracking-widest py-5 px-8 underline decoration-brick-red underline-offset-8">READ REGENERATION</button>
+</div>
+</section>
+<!-- 8. POSTSCRIPT -->
+<section class="py-section-gap px-margin-mobile">
+<div class="max-w-md mx-auto">
+<h5 class="font-label-caps text-label-caps tracking-widest mb-8 text-brick-red">LETTER FROM THE EDITOR</h5>
+<div class="font-body-lg text-body-lg space-y-6 text-justify">
+<p class=""><span class="text-6xl font-headline-display float-left mr-3 mt-1 leading-none">C</span>leaning isn't just about the absence of dirt. It's about the presence of order. Since 2017, we've walked into thousands of Portland homes and offices. Each one is a story. Our job is to make sure the next chapter starts on a clean page.</p>
+<p class="">We believe in the dignity of work. We believe in paying our people well and treating every client like a neighbor. Because in this city, they usually are.</p>
+</div>
+<div class="mt-12">
+<p class="font-headline-md text-headline-md italic">Jay's Cleaning Services</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap px-margin-mobile md:px-margin-desktop flex flex-col items-center text-center gap-12 bg-surface-container border-t-2 border-primary">
+<div class="font-headline-display text-headline-lg-mobile text-primary">CREW</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-label-caps text-label-caps text-primary hover:text-brick-red transition-all duration-200 hover:translate-x-1" href="#">PORTLAND &amp; NEIGHBORING CITIES</a>
+<a class="font-label-caps text-label-caps text-primary hover:text-brick-red transition-all duration-200 hover:translate-x-1" href="#">INSTAGRAM</a>
+<a class="font-label-caps text-label-caps text-primary hover:text-brick-red transition-all duration-200 hover:translate-x-1" href="#">LINKEDIN</a>
+<a class="font-label-caps text-label-caps text-primary hover:text-brick-red transition-all duration-200 hover:translate-x-1" href="#">EMAIL US</a>
+</div>
+<div class="font-label-caps text-label-caps text-on-tertiary-container mt-8">Vol. 01  Portland, TX   2024 Jay's Cleaning Services LLC</div>
+</footer>
+<script src="../assets/nav-bar.js" data-concept-name="Crew" data-concept-letter="B" data-back-href="../index.html" data-choose-href="mailto:designer@example.com?subject=Jay%27s%20�%20I%20choose%20Concept%20B" defer></script>
+</body></html>
