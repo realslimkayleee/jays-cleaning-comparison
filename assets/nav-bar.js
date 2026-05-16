@@ -59,9 +59,6 @@
       <div class="jcs-bar__label">
         CONCEPT ${config.letter} · ${config.name}
       </div>
-      <a href="${config.chooseHref}" class="jcs-bar__button">
-        <span class="jcs-button-text">Choose this</span> ${forwardIcon}
-      </a>
     `;
 
     // Wait until document.body is available
